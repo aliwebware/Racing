@@ -221,74 +221,87 @@ function App() {
       <Header />
       <section
         className="relative text-white py-28"
-        style={{
-          backgroundImage:
-            "url('/FundoServ.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+        src="/FundoServ.webp"
+        alt="Fundo Serviços"
+        fill
+        priority
+        className="object-cover transition-all duration-1000 ease-out opacity-0 animate-fade-in"
+        style={{ zIndex: 0 }}
+          />
+          <style jsx global>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: scale(1.05); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+          animation: fade-in 1.2s forwards;
+        }
+          `}</style>
+        </div>
         <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
-  <div className="container mx-auto px-2 sm:px-4 relative z-10">
+        <div className="container mx-auto px-2 sm:px-4 relative z-10">
           <div className="mt-20 flex flex-col items-center gap-8">
-            <h1
-              className="text-2xl sm:text-3xl md:text-6xl font-bold text-center max-w-full sm:max-w-4xl mb-6 drop-shadow-lg break-words"
+        <h1
+          className="text-2xl sm:text-3xl md:text-6xl font-bold text-center max-w-full sm:max-w-4xl mb-6 drop-shadow-lg break-words"
+          style={{ fontFamily: "Arial, sans-serif" }}
+        >
+          Transformamos sua Visão em Presença Digital
+        </h1>
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 sm:gap-8 w-full max-w-5xl">
+          <div className="flex-1 min-w-0">
+            <div className="max-w-xl mx-auto w-full">
+          <div className="backdrop-blur-md bg-gradient-to-br from-black/30 via-black/20 to-black/10 rounded-xl p-4 sm:p-6 border border-white/10 shadow-lg">
+            <p
+              className="text-base md:text-xl text-center md:text-left text-white"
               style={{ fontFamily: "Arial, sans-serif" }}
             >
-              Transformamos sua Visão em Presença Digital
-            </h1>
-            <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 sm:gap-8 w-full max-w-5xl">
-              <div className="flex-1 min-w-0">
-                <div className="max-w-xl mx-auto w-full">
-                  <div className="backdrop-blur-md bg-gradient-to-br from-black/30 via-black/20 to-black/10 rounded-xl p-4 sm:p-6 border border-white/10 shadow-lg">
-                    <p
-                      className="text-base md:text-xl text-center md:text-left text-white"
-                      style={{ fontFamily: "Arial, sans-serif" }}
-                    >
-                      Soluções criativas para destacar sua marca! Gerimos redes
-                      sociais e personalizamos materiais gráficos com estratégia
-                      e qualidade.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full max-w-md flex flex-col gap-4 md:items-end px-2 sm:px-4 md:px-8">
-                <div className="bg-gradient-to-br from-blue-900/40 via-blue-700/20 to-blue-600/10 backdrop-blur-md rounded-xl p-3 border border-blue-400/20 shadow-lg">
-                  <h2 className="text-lg font-bold text-white mb-2 text-center tracking-wide">
-                    Como contratar um serviço?
-                  </h2>
-                  <div className="flex flex-row gap-4 items-stretch">
-                    {/* Passo 1 */}
-                    <div className="flex flex-col items-center flex-1">
-                      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold mb-2 shadow-md">
-                        1
-                      </div>
-                      <span className="text-white text-center text-sm font-light">
-                        Escolha o serviço
-                      </span>
-                    </div>
-                    {/* Passo 2 */}
-                    <div className="flex flex-col items-center flex-1">
-                      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold mb-2 shadow-md">
-                        2
-                      </div>
-                      <span className="text-white text-center text-sm font-light">
-                        Selecione o pacote
-                      </span>
-                    </div>
-                    {/* Passo 3 */}
-                    <div className="flex flex-col items-center flex-1">
-                      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold mb-2 shadow-md">
-                        3
-                      </div>
-                      <span className="text-white text-center text-sm font-light">
-                        Contrate pelo WhatsApp
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              Soluções criativas para destacar sua marca! Gerimos redes
+              sociais e personalizamos materiais gráficos com estratégia
+              e qualidade.
+            </p>
+          </div>
             </div>
+          </div>
+          <div className="w-full max-w-md flex flex-col gap-4 md:items-end px-2 sm:px-4 md:px-8">
+            <div className="bg-gradient-to-br from-blue-900/40 via-blue-700/20 to-blue-600/10 backdrop-blur-md rounded-xl p-3 border border-blue-400/20 shadow-lg">
+          <h2 className="text-lg font-bold text-white mb-2 text-center tracking-wide">
+            Como contratar um serviço?
+          </h2>
+          <div className="flex flex-row gap-4 items-stretch">
+            {/* Passo 1 */}
+            <div className="flex flex-col items-center flex-1">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold mb-2 shadow-md">
+            1
+              </div>
+              <span className="text-white text-center text-sm font-light">
+            Escolha o serviço
+              </span>
+            </div>
+            {/* Passo 2 */}
+            <div className="flex flex-col items-center flex-1">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold mb-2 shadow-md">
+            2
+              </div>
+              <span className="text-white text-center text-sm font-light">
+            Selecione o pacote
+              </span>
+            </div>
+            {/* Passo 3 */}
+            <div className="flex flex-col items-center flex-1">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold mb-2 shadow-md">
+            3
+              </div>
+              <span className="text-white text-center text-sm font-light">
+            Contrate pelo WhatsApp
+              </span>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
           </div>
         </div>
       </section>

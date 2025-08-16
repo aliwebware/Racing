@@ -24,35 +24,47 @@ function AboutUs() {
       <Header />
       <section
         className="-top-20 relative text-white py-36 sm:py-58"
-        style={{
-          backgroundImage: "url('FundoSobre.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        <div className="absolute inset-0 bg-black/55 mix-blend-multiply" />
+        <motion.div
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.6,
+            ease: [0.4, 0.0, 0.2, 1], // ease-in-out cubic bezier
+          }}
+          className="absolute inset-0 w-full h-full"
+        >
+          <Image
+            src="/FundoSobre.webp"
+            alt="Fundo Sobre"
+            fill
+            priority
+            className="object-cover z-0"
+          />
+          <div className="absolute inset-0 bg-black/55 mix-blend-multiply z-10" />
+        </motion.div>
         <div className="container mx-auto px-2 sm:px-4 relative z-10 top-20 sm:top-38 -ml-0 sm:-ml-8">
-            <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mt-28 text-center flex flex-col items-center"
-            >
-            <h1
-              className="text-4xl md:text-7xl font-bold mx-auto max-w-4xl mb-6 text-center"
-              style={{ fontFamily: "Arial, sans-serif" }}
-            >
-              Do Gráfico ao Asfalto
-            </h1>
-            <p
-              className="text-base md:text-xl max-w-4xl mx-auto text-center"
-              style={{ fontFamily: "Arial, sans-serif" }}
-            >
-              Conheça mais sobre a nossa missão, visão e os valores que orientam
-              o nosso trabalho diário. Estamos comprometidos em transformar
-              vidas por meio da educação de excelência.
-            </p>
-            </motion.div>
+          <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mt-28 text-center flex flex-col items-center"
+          >
+        <h1
+          className="text-4xl md:text-7xl font-bold mx-auto max-w-4xl mb-6 text-center"
+          style={{ fontFamily: "Arial, sans-serif" }}
+        >
+          Do Gráfico ao Asfalto
+        </h1>
+        <p
+          className="text-base md:text-xl max-w-4xl mx-auto text-center"
+          style={{ fontFamily: "Arial, sans-serif" }}
+        >
+          Conheça mais sobre a nossa missão, visão e os valores que orientam
+          o nosso trabalho diário. Estamos comprometidos em transformar
+          vidas por meio da educação de excelência.
+        </p>
+          </motion.div>
         </div>
       </section>
 

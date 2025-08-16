@@ -4,45 +4,51 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Image from "next/image";
 function Contactos() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       {/* Hero Section */}
   
-      <section
+      <motion.section
+        initial={{ opacity: 0, y: -60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
         className="relative text-white py-46"
-        style={{
-          backgroundImage: "url('Contactos.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-                <div className="absolute inset-0 bg-black/55 mix-blend-multiply" />
+        <Image
+          src="/Contactos.webp"
+          alt="Contactos"
+          fill
+          className="object-cover object-center"
+          style={{ zIndex: 0 }}
+        />
+        <div className="absolute inset-0 bg-black/55 mix-blend-multiply" />
 
         <div className="container mx-auto px-2 sm:px-4 relative z-10 flex flex-col items-center justify-center top-10 sm:top-28">
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mt-10 sm:mt-20 w-full flex flex-col items-center justify-center"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mt-10 sm:mt-20 w-full flex flex-col items-center justify-center"
           >
-            <h1
-              className="text-2xl sm:text-4xl md:text-6xl font-semibold text-center mx-auto max-w-full sm:max-w-4xl mb-6 break-words"
-              style={{ fontFamily: "Arial, sans-serif" }}
-            >
-              Nossa Equipa Está Sempre Pronta para Você!
-            </h1>
-            <p
-              className="text-base sm:text-lg md:text-xl font-light max-w-full sm:max-w-4xl text-center mx-auto break-words"
-              style={{ fontFamily: "Arial, sans-serif" }}
-            >
-              Entre em contato conosco para qualquer dúvida, sugestão ou<br />
-              solicitação. Estamos aqui para ajudar!
-            </p>
+        <h1
+          className="text-2xl sm:text-4xl md:text-6xl font-semibold text-center mx-auto max-w-full sm:max-w-4xl mb-6 break-words"
+          style={{ fontFamily: "Arial, sans-serif" }}
+        >
+          Nossa Equipa Está Sempre Pronta para Você!
+        </h1>
+        <p
+          className="text-base sm:text-lg md:text-xl font-light max-w-full sm:max-w-4xl text-center mx-auto break-words"
+          style={{ fontFamily: "Arial, sans-serif" }}
+        >
+          Entre em contato conosco para qualquer dúvida, sugestão ou<br />
+          solicitação. Estamos aqui para ajudar!
+        </p>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
       
 
       <div className="container mx-auto px-6 py-20">
