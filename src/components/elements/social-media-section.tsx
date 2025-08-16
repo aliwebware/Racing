@@ -7,7 +7,7 @@ export default function SocialMediaSection() {
   return (
     <section
       id="social-media"
-      className="py-16 md:py-24 overflow-hidden px-2 sm:px-4 md:px-16 bg-[url('/FUndoSocialMedia.webp')] bg-cover bg-center bg-no-repeat"
+      className="py-16 md:py-24 overflow-hidden px-2 sm:px-4 md:px-16 bg-[url('/FundoSocialMedia.webp')] bg-cover bg-center bg-no-repeat"
     >
       <div className="container mx-auto px-2 sm:px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
