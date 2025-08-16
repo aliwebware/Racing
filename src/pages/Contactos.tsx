@@ -13,7 +13,7 @@ function Contactos() {
       <section
         className="relative text-white py-46"
         style={{
-          backgroundImage: "url('Contactos.jpg')",
+          backgroundImage: "url('Contactos.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

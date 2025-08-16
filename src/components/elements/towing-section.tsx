@@ -11,7 +11,7 @@ export default function TowingSection() {
           <AnimationWrapper delay={0.1}>
             <div className="relative h-[450px] md:h-[500px] rounded-xl overflow-hidden">
               <Image 
-                src="/reboque.png" 
+                src="/reboque.webp" 
                 alt="Serviço de Reboque" 
                 fill
                 style={{ objectFit: 'cover' }}
