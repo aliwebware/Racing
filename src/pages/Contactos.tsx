@@ -23,6 +23,7 @@ function Contactos() {
           fill
           className="object-cover object-center"
           style={{ zIndex: 0 }}
+          priority
         />
         <div className="absolute inset-0 bg-black/55 mix-blend-multiply" />
 
